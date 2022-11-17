@@ -1,8 +1,23 @@
+<script lang="ts" setup>
+import { useAuth0 } from '@auth0/auth0-vue';
+
+const { loginWithRedirect, isAuthenticated } = useAuth0();
+console.log()
+if(isAuthenticated.value) {
+    window.location.href = "/";
+};
+
+const login = () => {
+    loginWithRedirect();
+}
+
+</script>
+
 <template>
     <div class="box">
       <h1 class="title">Streaming platform</h1>
       <p class="desc">Welcome to the best streaming platform in the world. Sign up to access great content!!!</p>
-      <button class="btn">Sign up</button>
+      <button class="btn" @click="login">Sign up</button>
     </div>
 </template>
 

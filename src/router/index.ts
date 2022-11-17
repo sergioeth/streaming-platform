@@ -3,8 +3,8 @@ import Login from "../views/login.vue";
 import Home from "../views/home.vue";
 
 const routes: RouteRecordRaw[] = [
-  { path: "/", component: Home },
-  { path: "/login", component: Login },
+  { path: "/", name: "Home", component: Home },
+  { path: "/login", name: "Login", component: Login },
 ];
 
 const router = createRouter({
