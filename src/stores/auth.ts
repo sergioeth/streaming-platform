@@ -1,16 +1,22 @@
 import { InjectionKey } from "vue";
-import { createStore, useStore, Store } from "vuex";
+import { createStore, Store } from "vuex";
+import { useAuth0 } from "@auth0/auth0-vue";
 
 export interface State {
-  name: string;
-  token: string;
+  logged: boolean;
 }
 
 export const key: InjectionKey<Store<State>> = Symbol();
 
 export const store = createStore({
   state: {
-    name: "",
-    token: "",
+    logged: false,
+  },
+  getters: {
+    isLogged: (state): boolean => {
+      const { isAuthenticated } = useAuth0();
+      state.logged = isAuthenticated.value;
+      return state.logged;
+    },
   },
 });

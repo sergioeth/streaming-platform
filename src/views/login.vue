@@ -1,11 +1,12 @@
 <script lang="ts" setup>
 import { useAuth0 } from '@auth0/auth0-vue';
+import { useStore } from 'vuex';
+import { key } from '../stores/auth';
 
+const store = useStore(key);
 const { loginWithRedirect, isAuthenticated } = useAuth0();
-console.log()
-if(isAuthenticated.value) {
-    window.location.href = "/";
-};
+
+if(isAuthenticated.value) window.location.href = "/";
 
 const login = () => {
     loginWithRedirect();

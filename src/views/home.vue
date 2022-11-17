@@ -3,7 +3,7 @@ import { useStore } from 'vuex';
 import { key } from '../stores/auth';
 
 const store = useStore(key);
-if(store.state.token == "") window.location.href = "/login";
+if(!store.getters.isLogged) window.location.href = "/login";
 </script>
 
 <template>
