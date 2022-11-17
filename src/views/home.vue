@@ -22,10 +22,10 @@ export default {
   },
   mounted() {
     const store = useStore(key);
-    // if (!store.getters.isLogged) {
-    //   window.location.href = "/login";
-    //   return;
-    // }
+    if (!store.getters.isLogged) {
+      window.location.href = "/login";
+      return;
+    }
     this.getMovies;
   },
   components: {
