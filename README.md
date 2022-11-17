@@ -1,6 +1,11 @@
-# Vue 3 + TypeScript + Vite
+# Streaming platform
 
-This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
+This project is deployed in `Vercel`. Here you can check it out: [Project](https://streaming-platform-seven.vercel.app/).
+- This project use Auth0, Vuex Vue Router and Typescript.
+
+## Steps: 
+1. install: `yarn install`
+2. Run the project: `yarn run dev`
 
 ## Recommended IDE Setup
 
