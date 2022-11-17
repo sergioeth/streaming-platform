@@ -22,5 +22,6 @@ export default {
   font-size: 24px;
   color: white;
   font-family: "Rubik Distressed";
+  margin: auto;
 }
 </style>
