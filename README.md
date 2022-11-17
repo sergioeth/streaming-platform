@@ -1,6 +1,6 @@
 # Streaming platform
 
-This project is deployed in `Vercel`. Here you can check it out: [Project](https://streaming-platform-seven.vercel.app/).
+This project is deployed on `Vercel`. Here you can check it out: [Project](https://streaming-platform-seven.vercel.app/).
 - This project use Auth0, Vuex Vue Router and Typescript.
 
 ## Steps: 
